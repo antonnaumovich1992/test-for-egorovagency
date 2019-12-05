@@ -1,0 +1,178 @@
+<!DOCTYPE html5>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Front-end</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="index.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="main-grid">
+
+
+        <div class="header-grid logo">
+            <img src="./img/google-logo.png" class="main-logo">
+        </div>
+        <div class="header-grid nav">
+            <ul class="navbar">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Проекты</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="header-grid search">
+            <img src="./img/search.png" class="search-glass openBtn" onclick="openSearch()">
+
+            <div id="myOverlay" class="overlay">
+                <span class="closebtn" onclick="closeSearch()" title="Close Overlay"><img src="./img/close.svg"></span>
+
+                <div class="overlay-content">
+                    <form>
+                        <input type="text" placeholder="Search.." name="search" class="search-input">
+                    </form>
+
+                </div>
+
+                <button type="submit" class="submit-search"><img src="./img/search.png"><span>Найти</span></button>
+
+            </div>
+
+            <div class="burger-menu">
+
+                <a href="" class="burger-menu_button">
+                    <spun class="burger-menu_lines"></spun>
+                </a>
+                <nav class="burger-menu_nav">
+                    <a href="#section-1" class="burger-menu_link link1"><span>Главная</span></a>
+                    <a href="#section-2" class="burger-menu_link"><span>Каталог</span></a>
+                    <a href="#section-3" class="burger-menu_link"><span>Проекты</span></a>
+                    <a href="#section-4" class="burger-menu_link"><span>О компании</span></a>
+                    <a href="#section-5" class="burger-menu_link"><span>Контакты</span></a>
+
+                </nav>
+
+            </div>
+
+
+        </div>
+        <div class="catalog-grid electronics">
+            <div class="nonhov">Электроника</div>
+            <div class="hov hov-electronics hov-blue">
+                <div class="flex">
+                    <div class="flex-text">
+                        <div>Электроника</div>
+                        <ul>
+                            <li><a href="#">интеграл</a></li>
+                            <li><a href="#">электрод</a></li>
+                        </ul>
+                    </div>
+                    <img src="./img/supply.svg" class="catalog-img">
+                </div>
+            </div>
+        </div>
+        <div class="catalog-grid computers">
+            <div class="nonhov">Компьютеры и сети</div>
+            <div class="hov hov-computers hov-red">
+                <div class="flex">
+                    <div class="flex-text">
+                        <div>Компьютеры и сети</div>
+                        <ul>
+                            <li><a href="#">acer</a></li>
+                            <li><a href="#">hp</a></li>
+                        </ul>
+                    </div>
+                    <img src="./img/battery.svg" class="catalog-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog-grid appliances">
+            <div class="nonhov">Бытовая техника</div>
+            <div class="hov hov-appliances hov-blue">
+                <div class="flex">
+                    <div class="flex-text">
+                        <div>бытовая техника</div>
+                        <ul>
+                            <li><a href="#">samsung</a></li>
+                        </ul>
+                    </div>
+                    <img src="./img/generator.svg" class="catalog-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog-grid construction">
+            <div class="nonhov">Стройка и ремонт</div>
+            <div class="hov hov-construction hov-red">
+                <div class="flex">
+                    <div class="flex-text">
+                        <div>стройка и ремонт</div>
+                        <ul>
+                            <li><a href="#">акрил</a></li>
+                        </ul>
+                    </div>
+                    <img src="./img/robot.svg" class="catalog-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog-grid home">
+            <div class="nonhov">Дом и сад</div>
+            <div class="hov hov-home hov-blue">
+                <div class="flex">
+                    <div class="flex-text">
+                        <div>дом и сад</div>
+                        <ul>
+                            <li><a href="#">алмаз</a></li>
+                            <li><a href="#">Bosch</a></li>
+                        </ul>
+                    </div>
+                    <img src="./img/airbrush.svg" class="catalog-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog-grid auto">
+            <div class="nonhov">Авто и мото</div>
+            <div class="hov hov-home hov-red">
+                <div class="flex">
+                    <div class="flex-text">
+                        <div>авто и мото</div>
+                        <!-- <ul>
+                            <li></li>
+                        </ul> -->
+                    </div>
+                    <img src="./img/tools-and-utensils.svg" class="catalog-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-grid copyright"><span>Каталог&#169;</span></div>
+        <div class="footer-grid empty">
+            <div class="up-button-hide">
+                <div class="up-button">
+                    <img src="./img/up.svg"><span>НАВЕРХ</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-grid site-dev">
+            <span>Разработка Сайта</span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
