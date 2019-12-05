@@ -577,7 +577,6 @@ body {
 
   .burger-menu_nav {
     padding-top: 0;
-    /* justify-content: center; */
   }
 }
 
@@ -843,6 +842,17 @@ body {
     left: 51rem;
   }
 }
+
+@media (max-width: 640px) {
+  .burger-menu_active .burger-menu_lines::before {
+    left: 48em;
+  }
+
+  .burger-menu_active .burger-menu_lines::after {
+    left: 48rem;
+  }
+}
+
 @media (max-width: 568px) {
   .burger-menu_active .burger-menu_lines::before {
     left: 42em;
